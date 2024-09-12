@@ -1,0 +1,45 @@
+<!-- _layouts/default.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/styles.scss' | relative_url }}">
+</head>
+<body>
+<!-- _layouts/default.html -->
+<header>
+  <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Welcome to My GitHub Page">
+</header>
+
+  <div class="container">
+    <aside>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </aside>
+    <main>
+      Welcome to My GitHub Page
+    </main>
+  </div>
+</body>
+<!-- _layouts/default.html -->
+<footer>
+  <ul>
+    <li><a href="https://twitter.com/thesubbareddy">Twitter</a></li>
+    <li><a href="https://linkedin.com/in/subbareddy-paturu">LinkedIn</a></li>
+  </ul>
+</footer>
+
+<!-- _layouts/default.html -->
+<nav>
+  <ul>
+    {% for item in site.navigation %}
+      <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
+
+
+</html>
