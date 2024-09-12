@@ -1,19 +1,14 @@
+theme: minima
+
+# Add custom stylesheets
+sass:
+  style: compressed
+  load_paths:
+    - assets/css
+
+# Optional: Custom baseurl if needed
+baseurl: "" # Leave empty for the root or set to a specific path if hosting in a subdirectory
+
+# Optional: Site title and description
 title: "Subbareddy Paturu's Knowledge Hub"
 description: "Exploring AI, Knowledge Management, and Beyond"
-theme: minima
-baseurl: "" # Leave empty for root
-url: "https://yourusername.github.io" # Replace with your GitHub Pages URL
-paginate: 5
-
-
-# Add custom styles
-stylesheet: /assets/css/styles.scss
-
-
-navigation:
-  - title: Home
-    url: /
-  - title: About
-    url: /about/
-  - title: Contact
-    url: /contact/
