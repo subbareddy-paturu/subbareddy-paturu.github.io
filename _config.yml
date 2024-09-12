@@ -1,6 +1,10 @@
+title: "Subbareddy Paturu's Knowledge Hub"
+description: "Exploring AI, Knowledge Management, and Beyond"
 theme: minima
-title: My GitHub Page
-description: "Welcome to my personal GitHub Page!"
+baseurl: "" # Leave empty for root
+url: "https://yourusername.github.io" # Replace with your GitHub Pages URL
+paginate: 5
+
 
 # Add custom styles
 stylesheet: /assets/css/styles.scss

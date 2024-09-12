@@ -1,47 +1,39 @@
-<!-- _layouts/default.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>{{ site.title }}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} - {{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/styles.scss' | relative_url }}">
 </head>
 <body>
-<!-- _layouts/default.html -->
-<header>
-  <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Welcome to My GitHub Page">
-    <main>
-      Welcome to My GitHub Page
-      {% include recent-posts.html %}
-    </main>
-</header>
+  <header>
+    <h1>{{ site.title }}</h1>
+    <h2>{{ site.description }}</h2>
+  </header>
 
-  <div class="container">
-    <aside>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/contact/">Contact</a></li>
-      </ul>
-    </aside>
+  <nav>
+    <ul>
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      <li><a href="{{ '/generative-ai/' | relative_url }}">Generative AI</a></li>
+      <li><a href="{{ '/github-copilot/' | relative_url }}">GitHub Copilot</a></li>
+      <li><a href="{{ '/python-basics/' | relative_url }}">Python Basics</a></li>
+      <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+      <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+    </ul>
+  </nav>
 
-  </div>
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <p>&copy; {{ site.time | date: '%Y' }} Subbareddy Paturu. All rights reserved.</p>
+    <p>
+      <a href="https://github.com/subbareddy-paturu">GitHub</a> |
+      <a href="https://linkedin.com/in/subbareddy-paturu">LinkedIn</a>
+      <a href="https://twitter.com/thesubbareddy">Twitter</a>
+    </p>
+  </footer>
 </body>
-
-
-<!-- _layouts/default.html -->
-<nav>
-  <ul>
-    {% for item in site.navigation %}
-      <li><a href="item1">item1</a></li>
-    {% endfor %}
-  </ul>
-</nav>
-
-<!-- _layouts/default.html -->
-<footer>
-  <ul>
-    <li><a href="https://twitter.com/thesubbareddy">Twitter</a></li>
-    <li><a href="https://linkedin.com/in/subbareddy-paturu">LinkedIn</a></li>
-  </ul>
-</footer>
 </html>
