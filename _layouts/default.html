@@ -9,6 +9,10 @@
 <!-- _layouts/default.html -->
 <header>
   <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Welcome to My GitHub Page">
+    <main>
+      Welcome to My GitHub Page
+      {% include recent-posts.html %}
+    </main>
 </header>
 
   <div class="container">
@@ -19,11 +23,20 @@
         <li><a href="/contact/">Contact</a></li>
       </ul>
     </aside>
-    <main>
-      Welcome to My GitHub Page
-    </main>
+
   </div>
 </body>
+
+
+<!-- _layouts/default.html -->
+<nav>
+  <ul>
+    {% for item in site.navigation %}
+      <li><a href="item1">item1</a></li>
+    {% endfor %}
+  </ul>
+</nav>
+
 <!-- _layouts/default.html -->
 <footer>
   <ul>
@@ -31,15 +44,4 @@
     <li><a href="https://linkedin.com/in/subbareddy-paturu">LinkedIn</a></li>
   </ul>
 </footer>
-
-<!-- _layouts/default.html -->
-<nav>
-  <ul>
-    {% for item in site.navigation %}
-      <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-  </ul>
-</nav>
-
-
 </html>

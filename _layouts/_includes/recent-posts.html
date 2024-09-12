@@ -1,0 +1,9 @@
+<!-- _includes/recent-posts.html -->
+<section>
+  <h2>Recent Posts</h2>
+  <ul>
+    {% for post in site.posts limit:5 %}
+      <li><a href="GenAI">New post</a></li>
+    {% endfor %}
+  </ul>
+</section>
